@@ -1,7 +1,7 @@
 # Памятка для ИИ-помощника: установка и проверка модов
 
 Этот репозиторий — готовые к установке моды для Age of Reforging: The Freelands (Steam):
-DemonLook 0.22.0, ItemForge 2.0.0, EncounterScale 1.2.0 и русский перевод. Исходников и
+DemonLook 0.23.0, ItemForge 2.1.0, EncounterScale 1.2.0 и русский перевод. Исходников и
 сборки здесь нет: нужно только поставить и проверить. Отвечайте человеку по-русски.
 
 ## Что лежит в репозитории
@@ -14,7 +14,8 @@ release/BepInEx/plugins/ItemForge/LocalizationPatch/   dialogue_ru.tsv, items_ru
 release/BepInEx/plugins/EncounterScale/EncounterScale.dll
 ```
 
-То же одним архивом — `aor-freelands-mods-v1.0.zip` в выпуске v1.0 (Releases).
+Скачать всё одним архивом — кнопка **Code** → **Download ZIP** на странице репозитория.
+Архив `v1.0` в разделе Releases устарел, его не используйте.
 
 ## Установка по шагам (Windows)
 
@@ -34,8 +35,8 @@ release/BepInEx/plugins/EncounterScale/EncounterScale.dll
      `doorstop_config.ini`;
    - попросить человека запустить игру до главного меню и закрыть: BepInEx создаст
      `BepInEx\plugins` и `BepInEx\config`.
-5. **Моды.** Скопировать содержимое `release\` в папку игры со слиянием папок (или
-   распаковать туда архив из выпуска). Каждый мод — в своей папке `BepInEx\plugins\<Мод>\`.
+5. **Моды.** Скопировать содержимое `release\` в папку игры со слиянием папок и заменой
+   файлов. Каждый мод — в своей папке `BepInEx\plugins\<Мод>\`.
    Нельзя класть DLL прямо в `BepInEx\plugins`: ItemForge ищет перевод рядом с собой.
 6. **Проверка файлов:** есть `BepInEx\plugins\DemonLook\DemonLook.dll`,
    `BepInEx\plugins\ItemForge\ItemForge.dll`, `BepInEx\plugins\ItemForge\LocalizationPatch\`
@@ -46,8 +47,8 @@ release/BepInEx/plugins/EncounterScale/EncounterScale.dll
 Попросите человека запустить игру и дойти до главного меню, затем прочтите
 `BepInEx\LogOutput.log` в папке игры. Должно быть:
 
-- `Demon Race v0.22.0 loaded` и строка `Правок поставлено: N` (DemonLook);
-- `Item Forge v2.0.0 loaded` и `Патчей поставлено: N` (ItemForge);
+- `Demon Race v0.23.0 loaded` и строка `Правок поставлено: N` (DemonLook);
+- `Item Forge v2.1.0 loaded` и `Патчей поставлено: N` (ItemForge);
 - `Encounter Scale v1.2.0 loaded`;
 - строка вида `Перевод прочитан из «...\ItemForge\LocalizationPatch»` — перевод найден.
 
