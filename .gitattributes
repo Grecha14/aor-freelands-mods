@@ -1,0 +1,6 @@
+# Готовые файлы для игры — байт в байт: без перевода строк, как лежат в папке игры
+release/** -text
+*.dll binary
+
+# Скрипты PowerShell — с переносами Windows
+*.ps1 text eol=crlf

@@ -1,0 +1,506 @@
+# spells_ru.tsv — названия заклинаний и умений, привязанные к внутреннему ID.
+# Колонки: id | внутреннее имя (для чтения человеком) | русское название.
+# Устроен так же, как items_ru.tsv, и по той же причине: привязка к id
+# переживает обновление игры, а правило по русскому тексту умирает молча,
+# стоит разработчику переписать свой перевод.
+#
+# Файл обязан лежать рядом с DLL, как translations.txt и items_ru.tsv.
+# Пересоздаётся из review/spell_dump.tsv, см. docs/JOURNAL.md.
+245	Skill_Bard_KerrimanWarsong	Военная песнь Керримана
+282	Skill_Bard_KerrimanWarsong	Военная песнь Керримана
+246	Skill_Bard_LionRoar	Рык льва
+247	Skill_Bard_MelicianFestival	Фестиваль Мелициан
+299	Skill_Bard_MelicianFestival	Фестиваль Мелициан
+248	Skill_Bard_OsseydisCurse	Проклятие Оссейди
+249	Skill_Bard_SendingSoulRequiem	Реквием Сендингсоул
+250	Skill_Bard_SoundBurst	Звуковой взрыв
+251	Skill_Bard_SummerFlies	Летние мухи
+244	Skill_Bard_TharaEnsarulaAsil	Тара энсарула асил
+252	Skill_Bard_VanucriusAnvil	Наковальня Ванукриуса
+168	Skill_Battlemonk_ChiHeal	Чи-исцеление
+169	Skill_Battlemonk_EnergyBlast	Взрыв Ци
+170	Skill_Battlemonk_EnergyBurst	Сплоченность
+171	Skill_Battlemonk_EnergyShield	Щит Ци
+172	Skill_Battlemonk_LandingAttack	Посадочная атака
+124	Skill_Berserker_Execute	Казнь
+125	Skill_Berserker_HeadButt	Таран
+126	Skill_Berserker_Reckless posture	Безрассудная поза
+127	Skill_Berserker_SuppressAnger	Подавить гнев
+128	Skill_Berserker_UnleashRage	Разгулять ярость
+32	Skill_Commander_Condemn	Осудить
+21	Skill_Commander_First aid	Первая помощь
+36	Skill_Commander_Rescue	Спасение
+43	Skill_Commander_Stimulate	Стимулировать
+34	Skill_Commander_War banner	Военное знамя
+24	Skill_Commander_War roar	Боевой рев
+67	Skill_Defender_Focus block	Фокусированный блок
+68	Skill_Defender_Fortress	Крепость
+69	Skill_Defender_Guardian	Страж
+70	Skill_Defender_Impair attack	Ослабляющая атака
+19	Skill_Defender_Intercept	Перехват
+54	Skill_Duelist_Advanced dodge	Продвинутое уклонение
+57	Skill_Duelist_Break free	Освободиться
+55	Skill_Duelist_Challenge	Вызов
+56	Skill_Duelist_Concentrative mode	Режим концентрации
+25	Skill_Duelist_Disarm	Разоружение
+59	Skill_Duelist_Precision strike	Точный удар
+45	Skill_Gladiator_Battle furor	Боевая ярость
+31	Skill_Gladiator_Dash attack	Атака с рывком
+12	Skill_Gladiator_Kick down	Сбивающий удар
+40	Skill_Gladiator_Power strike	Мощный удар
+23	Skill_Gladiator_Whirlwind attack	Вихревая атака
+129	Skill_Marksman_ArmorPiercingArrow	Бронебойная стрела
+130	Skill_Marksman_BurningArrow	Горящая стрела
+131	Skill_Marksman_ImpactArrow	Ударная стрела
+132	Skill_Marksman_JumpArrow	Прыгающая стрела
+133	Skill_Marksman_ScoutPosture	Позиция разведчика
+184	Skill_Ninja_Caltrops	Колючки
+185	Skill_Ninja_Shuriken	Сюрикен
+186	Skill_Ninja_SmokePill	Дымовая шашка
+187	Skill_Ninja_Untouchable	Непредсказуемый
+84	Skill_Ranger_Back flip shot	Выстрел с сальто назад
+85	Skill_Ranger_Double shoot	Двойной выстрел
+86	Skill_Ranger_Repulse	Отталкивание
+87	Skill_Ranger_Slide strafe	Скользящий обстрел
+88	Skill_Ranger_Trace arrow	Следящая стрела
+74	Skill_Rogue_BackAttack	Атака сзади
+72	Skill_Rogue_Blinding dust	Ослепляющая пыль
+73	Skill_Rogue_Envenomed weapon	Ядовитое оружие
+58	Skill_Rogue_Evasion	Уклонение
+165	Skill_Rogue_Lurk	Таиться
+75	Skill_Rogue_Painspot attack	Атака на болевую точку
+188	Skill_Samurai_Cross slash	Крестовый удар
+189	Skill_Samurai_IaidoSlash	Удар иайдо
+190	Skill_Samurai_MeteorSlash	Потоковый удар
+199	Skill_Shapeshift_FatalBite	Смертельный укус
+200	Skill_Shapeshift_GrabAttack	Захват
+201	Skill_Shapeshift_HowlOfTerror	Вой ужаса
+202	Skill_Shapeshift_Shred	Разрыв
+203	Skill_Shapeshift_WerebearForm	Оборотень-медведь
+204	Skill_Shapeshift_WerewolfFrom	Оборотень-волк
+96	UseItem	Использовать предмет
+301	UseItem_Bowl	Использовать миску
+302	UseItem_Drink	Выпить
+303	UseItem_Eat	Съесть
+236	Spell_Dark_BlackMist	Черный туман
+237	Spell_Dark_CorruptingTouch	Губительное прикосновение
+264	Spell_Dark_DarkBats	Темные летучие мыши
+238	Spell_Dark_DarkFury	Темная ярость
+239	Spell_Dark_DarkImprison	Темное заключение
+240	Spell_Dark_DarkShield	Темный щит
+241	Spell_Dark_ShadowMove	Теневое движение
+265	Spell_Dark_ShadowSpear	Теневое копье
+283	Spell_Earth_BoulderToss	Бросок валуна
+284	Spell_Earth_EarthShock	Землетрясение
+285	Spell_Earth_RockArmor	Каменная броня
+291	Spell_Earth_RockFist	Каменный кулак
+286	Spell_Earth_RockSpikes	Каменные шипы
+290	Spell_Earth_Sandstorm	Песчаная буря
+292	Spell_Earth_StoneBarrier	Каменная барьера
+293	Spell_Earth_SummonGolem	Призвать голема
+42	Spell_Fire_FireBall	Огненный шар
+30	Spell_Fire_FireHurricane	Огненный ураган
+14	Spell_Fire_FireShield	Огненный щит
+27	Spell_Fire_FireWall	Противопожарная стена
+49	Spell_Fire_FlamingWeapons	Пылающее оружие
+51	Spell_Fire_Hellfire	Адский огонь
+46	Spell_Fire_Ignite	Зажечь
+28	Spell_Fire_ImpureFlame	Нечистое пламя
+294	Spell_Forest_Barkskin	Дубовая кожа
+305	Spell_Forest_ForestMark	Лесная метка
+295	Spell_Forest_PoisonCloudArrow	Стрела ядовитого облака
+296	Spell_Forest_SpikeGrowth	Пиковый рост
+297	Spell_Forest_SummonAirSpirit	Призыв духа воздуха
+288	Spell_Forest_SummonForestSpirit	Призвать лесного духа
+298	Spell_Forest_ThornsPuncture	Прокол шипов
+287	Spell_Forest_VineEntangle	Лоза запутывает
+289	Spell_Forest_WallofThorns	Стена шипов
+48	Spell_Ice_ColdFury	Холодная ярость
+35	Spell_Ice_FrostShield	Морозный щит
+39	Spell_Ice_FrostWeapon	Ледяное оружие
+17	Spell_Ice_FrozenImprison	Замороженная тюрьма
+33	Spell_Ice_IceCones	Ледяные конусы
+50	Spell_Ice_IceImpale	Ледяной кол
+18	Spell_Ice_IceMissile	Ледяная ракета
+13	Spell_Ice_IceRay	Ледяной луч
+76	Spell_Electric_ChargedAttack	Заряженная атака
+77	Spell_Electric_ChargedWeapons	Заряженное оружие
+78	Spell_Electric_ElectricArc	Электрическая дуга
+79	Spell_Electric_LightningChain	Цепная молния
+80	Spell_Electric_LightningShield	Молниезащитный щит
+81	Spell_Electric_LightningStrike	Удар молнии
+82	Spell_Electric_OrbLightning	Сферическая молния
+83	Spell_Electric_TerritoryOfLightning	Территория молний
+242	Spell_Necromancy_BoneArmor	Костяная броня
+243	Spell_Necromancy_DrainSoul	Истощение души
+253	Spell_Necromancy_EvilHaunt	Зловещее преследование
+254	Spell_Necromancy_SpiritForm	Духовная форма
+255	Spell_Necromancy_SummonCorpse	Призыв трупа
+256	Spell_Necromancy_SummonSkeletonArcher	Призвать скелета-лучника
+257	Spell_Necromancy_SummonSkeletonWarrior	Призвать воина-скелета
+258	Spell_Necromancy_SummonVengefulGhost	Вызов мстительного призрака
+191	Spell_White_BrightMissles	Яркие ракеты
+192	Spell_White_FieldOfLight	Поле света
+193	Spell_White_FuryOfIrandus	Ярость Ирандуса
+194	Spell_White_GlimmeringCloak	Мерцающий плащ
+195	Spell_White_HealingLight	Целительный свет
+196	Spell_White_LightBarrier	Световой барьер
+197	Spell_White_LightedWeapons	Освещенное оружие
+198	Spell_White_LightShackles	Световые оковы
+274	Spell_Witch_CharmSpell	Заклинание очарования
+275	Spell_Witch_JoySpell	Заклинание радости
+276	Spell_Witch_PurgeSpell	Заклинание очищения
+277	Spell_Witch_RageSpell	Заклинание ярости
+278	Spell_Witch_SadnessSpell	Заклинание грусти
+279	Spell_Witch_SleepSpell	Заклинание сна
+280	Spell_Witch_SlothSpell	Заклинание лени
+281	Spell_Witch_TerrorSpell	Заклинание ужаса
+94	Spell_MonsterAbility_AnimalRampage	Буйство
+174	Spell_MonsterAbility_BrutalBite	Жестокий укус
+105	Spell_Ice_IceRay	Ледяной луч
+106	Spell_MonsterAbility_TailAttack	Атака хвостом
+123	Spell_MonsterAbility_CentaurLegattack	Атака ногой
+107	Skill_Berserker_HeadButt	Таран
+115	Spell_MonsterAbility_BrutalBite	Жестокий укус
+117	Spell_MonsterAbility_ChimeraVenomEject	выброс яда
+145	Spell_MonsterAbility_CrabCombo	Комбо рендеринга
+205	Spell_MonsterAbility_Grab	Хватать
+150	Spell_MonsterAbility_Shriek	Крик
+206	Spell_MonsterAbility_DesertDragonSandHurricane	Песчаный ураган
+20	Spell_MonsterAbility_DragonFireBall	Огненный шар
+53	Spell_MonsterAbility_Grab	Хватать
+52	Spell_MonsterAbility_DragonSpreadFire	Драконий огонь
+207	Spell_MonsterAbility_ElephantTeethAttack	Нападение бивнями
+208	Spell_MonsterAbility_ElephantTrample	Топтать
+95	Spell_MonsterAbility_SpinAttack	Атака вращением
+209	Spell_MonsterAbility_FatOrgeSweep	Подметать
+148	Skill_Berserker_HeadButt	Таран
+259	Spell_MonsterAbility_Fishman3QuickShoot	Быстрая стрельба
+260	Spell_MonsterAbility_Combo	Комбо
+261	Spell_MonsterAbility_Combo	Комбо
+262	Spell_MonsterAbility_FishmanHurtHands	Раненые руки
+263	Spell_MonsterAbility_Shriek	Крик
+266	Spell_MonsterAbility_FishmanSludgeArrow	Грязевая стрела
+210	Spell_MonsterAbility_SpinAttack	Атака вращением
+211	Spell_MonsterAbility_VenomBite	Ядовитый укус
+267	Spell_MonsterAbility_GaintGolemHitFloor	Разрушить землю
+151	Spell_MonsterAbility_GaintHitFloor	Сотрясение земли
+156	Spell_MonsterAbility_Grab	Хватать
+157	Spell_MonsterAbility_JumpAttack	Прыжковая атака
+158	Skill_Gladiator_Dash attack	Атака с рывком
+159	Spell_MonsterAbility_GargoyleSpreadFire	Распространение огня
+235	Spell_MonsterAbility_GiantCrabRampage	Буйство
+304	Spell_MonsterAbility_Burrow	Нора
+230	Spell_MonsterAbility_GiantSandwormDevour	Пожирать
+231	Spell_MonsterAbility_Shriek	Крик
+232	Spell_MonsterAbility_GiantSandwormSpawnWorms	Порождать червей
+233	Spell_MonsterAbility_GiantSandwormSpitSand	Плевать песком
+108	Spell_MonsterAbility_Combo	Комбо
+109	Spell_MonsterAbility_PoisonStinger	Ядовитое жало
+212	Spell_MonsterAbility_GiantSpiderSpinWeb	Плести паутину
+213	Spell_MonsterAbility_GiantSpiderSpitVenom	Ядовитая слюна
+214	Spell_MonsterAbility_GiantSpiderWebTrap	Паутина-ловушка
+152	Spell_MonsterAbility_GaintHitFloor	Сотрясение земли
+268	Spell_MonsterAbility_GoblinWarRoar	Рёв
+215	Spell_MonsterAbility_Impact	Удар
+216	Spell_MonsterAbility_Burrow	Нора
+167	Spell_MonsterAbility_GriffonFlapWings	Взмах крыльев
+218	Spell_MonsterAbility_Grab	Хватать
+104	Spell_MonsterAbility_CrabCombo	Комбо рендеринга
+121	Spell_MonsterAbility_Shriek	Крик
+173	Spell_MonsterAbility_HippogriffClawattack	Когтевая атака
+219	Spell_MonsterAbility_Shriek	Крик
+110	Skill_Gladiator_Dash attack	Атака с рывком
+220	Spell_MonsterAbility_HobgoblinHeavyStrike	Тяжёлый удар
+160	Spell_MonsterAbility_HowlOfTerror	Вой ужаса
+221	Spell_MonsterAbility_IronGuardHeavySlash	Тяжёлый удар
+222	Spell_MonsterAbility_JumpAttack	Прыжковая атака
+300	Spell_MonsterAbility_KyleSpawnWolfSpirit	Призыв духов волков
+273	Buff_Spellbuff_WerewolfForm	Оборотень-волк форма
+269	Spell_MonsterAbility_LizardmanBrutalClawAttack	Жестокая когтевая атака
+270	Spell_MonsterAbility_Roar	Рев
+271	Spell_MonsterAbility_TailAttack	Атака хвостом
+272	Spell_MonsterAbility_ThrowSpear	Бросок копья
+111	Spell_MonsterAbility_ThrowSpear	Бросок копья
+112	Spell_MonsterAbility_LizardTongue	Язычковая атака
+161	Spell_MonsterAbility_BlackFireBall	Черный огненный шар
+162	Spell_Blood_BloodShield	Кровавый щит
+164	Spell_MonsterAbility_SoulWeapon	Оружие души
+163	Spell_Fire_Ignite	Зажечь
+97	Spell_MonsterAbility_ManticoreCritLeap	Смертельный прыжок
+98	Spell_MonsterAbility_PoisonStinger	Ядовитое жало
+113	Skill_Gladiator_Dash attack	Атака с рывком
+114	Skill_Weapon_Shield_Smash ground	Удар по земле
+223	Spell_MonsterAbility_Shriek	Крик
+224	Spell_MonsterAbility_Impact	Удар
+144	Spell_MonsterAbility_OrcMasterWindmill	Ветряная мельница
+134	Spell_MonsterAbility_Combo	Комбо
+135	Spell_MonsterAbility_OrcPunch	Удар
+136	Skill_Gladiator_Dash attack	Атака с рывком
+137	Spell_MonsterAbility_Combo	Комбо
+138	Spell_MonsterAbility_ShieldStrike	Удар щитом
+139	Spell_MonsterAbility_Orcshieldswipe	Взмах щитом
+149	Spell_MonsterAbility_PetrifyRay	Окаменевший луч
+116	Spell_MonsterAbility_Combo	Комбо
+60	Spell_MonsterAbility_Roar	Рев
+234	Spell_MonsterAbility_Burrow	Нора
+102	Spell_MonsterAbility_Combo	Комбо
+153	Spell_MonsterAbility_TailAttack	Атака хвостом
+103	Spell_MonsterAbility_SpinAttack	Атака вращением
+154	Spell_MonsterAbility_LizardTongue	Язычковая атака
+155	Spell_MonsterAbility_TreeEntThrowRock	Бросок камня
+99	Spell_MonsterAbility_Grab	Хватать
+100	Spell_MonsterAbility_GaintGolemHitFloor	Разрушить землю
+101	Spell_MonsterAbility_TrollSprayAcid	Распыление кислоты
+146	Spell_MonsterAbility_ShieldStrike	Удар щитом
+225	Spell_MonsterAbility_VampireJumpBite	Прыжковый укус
+122	Spell_MonsterAbility_GiantSpiderSpitVenom	Ядовитая слюна
+118	Skill_Gladiator_Dash attack	Атака с рывком
+140	Skill_Gladiator_Dash attack	Атака с рывком
+141	Spell_MonsterAbility_OrcPunch	Удар
+142	Spell_MonsterAbility_Roar	Рев
+226	Spell_MonsterAbility_GargoyleSpreadFire	Распространение огня
+147	Spell_MonsterAbility_Roar	Рев
+143	Spell_MonsterAbility_Combo	Комбо
+119	Spell_MonsterAbility_VampireJumpBite	Прыжковый укус
+120	Spell_MonsterAbility_werewolfjumpclaw	Прыжковая атака
+227	Spell_MonsterAbility_Shriek	Крик
+228	Spell_MonsterAbility_WraithPainEmbrace	Объятия боли
+229	Spell_MonsterAbility_WraithSoulReap	Жатва душ
+166	Spell_MonsterAbility_WyvernStingerAttack	Атака жала
+22	Skill_Weapon_Dual_Cross cut	Крестообразный разрез
+15	Skill_Weapon_Dual_Feign attack	Ложная атака
+47	Skill_Weapon_Dual_Serial pricks	Серийные уколы
+16	Skill_Weapon_Dual_Speed burst	Всплеск скорости
+26	Skill_Weapon_Dual_Whirlwind	Вихрь
+89	Skill_Weapon_OneHand_Gale combo	Шквальная комбинация
+90	Skill_Weapon_OneHand_Head blow	Удар по голове
+92	Skill_Weapon_OneHand_SideStepAttack	Атака с шагом в сторону
+93	Skill_Weapon_OneHand_Smart gesture	Умный жест
+91	Skill_Weapon_OneHand_Tentative attack	Пробный удар
+61	Skill_Weapon_Polearm_Impale	Прокалывание
+62	Skill_Weapon_Polearm_Intersect poke	Быстрый удар
+63	Skill_Weapon_Polearm_Round sweep	Круговой взмах
+64	Skill_Weapon_Polearm_Stretching attack	Растягивающая атака
+65	Skill_Weapon_Polearm_Stumble sweep	Сбивающий взмах
+66	Skill_Weapon_Polearm_Upstroke	Сокрушение
+6	Skill_Weapon_Ranged_Death zone	Зона смерти
+7	Skill_Weapon_Ranged_Disabled shoot	Оглушающий выстрел
+8	Skill_Weapon_Ranged_Execute shoot	Казненческий выстрел
+9	Skill_Weapon_Ranged_Multi shoot	Мультивыстрел
+10	Skill_Weapon_Ranged_Power shoot	Мощный выстрел
+11	Skill_Weapon_Ranged_Quick aim	Быстрая прицельная стрельба
+29	Skill_Weapon_Shield_Alternate Attack	Чередующаяся атака
+38	Skill_Weapon_Shield_Jump slash	Прыжковый удар
+44	Skill_Weapon_Shield_Knock shield	Провокация щитом
+41	Skill_Weapon_Shield_Shield strike	Удар щитом
+37	Skill_Weapon_Shield_Shield wall	Каменный страж
+71	Skill_Weapon_Shield_Smash ground	Удар по земле
+0	Skill_Weapon_TwoHand_Armour crash	Дробление брони
+1	Skill_Weapon_TwoHand_Charge attack	Атака с разбега
+2	Skill_Weapon_TwoHand_Hilt strike	Удар рукояткой
+3	Skill_Weapon_TwoHand_Mighty guard	Мощь Геракла
+4	Skill_Weapon_TwoHand_Spiral slash	Спиральный удар
+5	Skill_Weapon_TwoHand_Trio slash	Тройной удар
+175	Skill_Weapon_Unarmed_AxeKick	Топорный удар ногой
+176	Skill_Weapon_Unarmed_HugSmash	Объятие-сокрушение
+177	Skill_Weapon_Unarmed_InjuringPalm	Травмирующая ладонь
+178	Skill_Weapon_Unarmed_LegSweep	Вихревой удар ногой
+179	Skill_Weapon_Unarmed_RaptorPose	Поза хищника
+180	Skill_Weapon_Unarmed_SerpentsPose	Поза змеи
+181	Skill_Weapon_Unarmed_TigerPose	Поза тигра
+182	Skill_Weapon_Unarmed_TornadoPunch	Торнадо удар
+183	Skill_Weapon_Unarmed_Uppercut	Апперкот
+306	Spell_MonsterAbility_Roar	Рев
+307	UseItem_DrinkPotion	Выпить зелье
+217	Spell_Blood_BloodDrain	Кровоизлияние
+308	Spell_Blood_BloodMist	Кровавый туман
+309	Spell_Blood_BloodReap	Кровавый урожай
+310	Spell_Blood_BloodScourge	Кровавый бич
+311	Spell_Blood_BloodSeethe	Кровавое кипение
+312	Spell_Blood_BloodShield	Кровавый щит
+313	Spell_Blood_BloodThirstyWeapon	Кровожадное оружие
+314	Spell_Blood_BloodThorn	Кровавый шип
+318	Spell_Air_FierceWind	Яростный ветер
+316	Skill_Air_Levitation	Левитация
+317	Spell_Air_Hurricane	Ураган
+315	Spell_Air_Tornado	Торнадо
+319	Spell_Air_WindBlast	Ветровой взрыв
+320	Spell_Air_WindBless	Благословение ветра
+321	Spell_Air_WindShield	Ветровой щит
+322	Spell_Air_WindWall	Ветровая стена
+323	Spell_Fire_FireMagicAttack	Пламенная ракета
+324	Spell_Black_BlackMagicAttack	Тёмный снаряд
+325	Spell_Ice_IceMagicAttack	Морозная ракета
+326	Spell_Lightning_LightningMagicAttack	Молниеносная ракета
+327	Spell_White_WhiteMagicAttack	Легкая ракета
+329	Skill_Ninja_SmokePill	Дымовая шашка
+330	Spell_Monster_TimeAbsoluteFieldOfTime	Абсолютное поле времени
+331	Spell_Monster_TimeTemporalAcceleration	Ускорение времени
+332	Spell_Monster_TimeTemporalDeceleration	Замедление времени
+333	Spell_Electric_ElectricArc	Электрическая дуга
+334	Spell_Electric_LightningShield	Молниезащитный щит
+335	Spell_MonsterAbility_SpinAttack	Атака вращением
+336	Spell_Time_TimeReplication	Репликация времени
+337	Skill_YanguanSword_Dengyun	Дэнъюн
+338	Skill_YanguanSword_Yandang	Яндан
+339	Skill_YanguanSword_Yanji	Яньцзи
+340	Skill_YanguanSword_Yanfan	Яньфань
+341	Skill_YanguanSword_Yanluo	Яньлуо
+342	Skill_YanguanSword_Zhouyu	Чжоую
+343	Spell_MonsterAbility_TailAttack	Атака хвостом
+344	Spell_MonsterAbility_GiantViperKingStrangle	Удушение
+345	Spell_Fire_SummonFireElemental	Призвать огненного элементаля
+346	Spell_Dark_SummonDarknessElemental	Призвать элементаля тьмы
+347	Spell_Ice_SummonIceElemental	Призвать ледяного элементаля
+348	Spell_Electric_SummonLightningElemental	Призвать элементаля молнии
+349	Spell_White_SummonLightElemental	Призвать элементаля света
+350	Spell_Ice_ColdFury	Холодная ярость
+351	Spell_Fire_FlamingWeapons	Пылающее оружие
+352	Spell_Ice_FrostShield	Морозный щит
+353	Spell_Ice_FrostWeapon	Ледяное оружие
+354	Spell_Ice_FrozenImprison	Замороженная тюрьма
+355	Spell_Ice_IceCones	Ледяные конусы
+356	Spell_Ice_IceImpale	Ледяной кол
+357	Spell_Ice_IceMissile	Ледяная ракета
+358	Skill_Rogue_Envenomed weapon	Ядовитое оружие
+359	Skill_Weapon_Shield_Knock shield	Провокация щитом
+360	Skill_Weapon_Shield_Shield strike	Удар щитом
+361	Skill_Weapon_Dual_Whirlwind	Вихрь
+362	Skill_Gladiator_Whirlwind attack	Вихревая атака
+363	Spell_MonsterAbility_GiantSpiderSpitVenom	Ядовитая слюна
+364	Spell_MonsterAbility_DragonSpreadVenom	Всплеск яда
+365	Spell_Dark_DarkBats	Темные летучие мыши
+366	Spell_Fire_ImpureFlame	Нечистое пламя
+367	Spell_MonsterAbility_DragonSpreadFire	Драконий огонь
+368	Skill_Weapon_Ranged_RainOfArrows	Дождь стрел
+369	Spell_Forest_RattanWhip	Ротанговый кнут
+370	Spell_Air_SummonAirElemental	Призвать воздушного элементаля
+371	Spell_Air_AirMagicAttack	Воздушная ракета
+372	Spell_Monster_MysticChainEndurance	Цепь выносливости
+373	Spell_Monster_MysticChainAgility	Цепь ловкости
+374	Spell_Monster_MysticChainStrength	Цепь силы
+375	Spell_Monster_MysticChainWillpower	Цепь воли
+379	Spell_MonsterAbility_GiantSpiderSpitVenom	Ядовитая слюна
+380	Spell_MonsterAbility_DragonSpreadVenom	Всплеск яда
+381	Spell_MonsterAbility_CorpsePoisonCloud	Ядовитое облако
+382	Spell_MonsterAbility_GhoulJumpGrabBite	Прыжок с захватом и укусом
+383	Skill_MonsterAbility_MummyPriestJump	Прыжок
+384	Skill_Berserker_UnleashRage	Разгулять ярость
+385	Spell_MonsterAbility_SerpentWarriorCryOfHorror	Крик ужаса
+386	Skill_MonsterAbility_SerpentWarriorThrowFireJar	Бросок огненной банки
+387	Spell_MonsterAbility_SerpentWarriorToxicPowder	Токсичный порошок
+378	Spell_MonsterAbility_SpinAttack	Атака вращением
+389	Spell_MonsterAbility_WerecrabDisturbingHowl	Тревожный вой
+376	Spell_MonsterAbility_WereratCryOfMadness	Крик безумия
+377	Skill_Shapeshift_WereratPestilenceBite	Чумной укус
+390	Spell_MonsterAbility_WerespiderCobwebGround	Паутинный пол
+391	Spell_MonsterAbility_werewolfjumpclaw	Прыжковая атака
+388	Spell_MonsterAbility_MummyPriestCurse	Проклятие
+392	Skill_Berserker_UnleashRage	Разгулять ярость
+393	Spell_MonsterAbility_GiantCrabBlowBubbles	Пускать пузыри
+394	Spell_MonsterAbility_GiantCrabHydroWaterLance	Гидроводяное копье
+395	Skill_Weapon_Dual_DualWield	Двойное владение
+396	Skill_Weapon_Dual_SprintThrust	Рывок с толчком
+397	Spell_ItemSpells_BlessingOfGortus	Благословение Гортуса
+398	Spell_ItemSpells_BlessingOfIruos	Благословение Ируоса
+399	Spell_ItemSpells_BlessingOfVanucrius	Благословение Ванукриуса
+400	UseItemBehav_DrinkPotion_AmnesiaPotion	Выпить зелье амнезии
+401	UseItem_DrinkPotion_DeathImmunePotion	Выпить зелье бессмертия
+402	UseItem_DrinkPotion_LoyaltyPotion	Выпить зелье верности
+403	UseItem_DrinkPotion_MoralePotion	Выпить зелье боевого духа
+404	UseItem_DrinkPotion_PhysicalHealing	Выпить зелье исцеления
+405	UseItem_DrinkPotion_RebirthPotion	Выпить зелье возрождения
+406	Skill_YinjiaSpear_BaoYuCuiHua	Ливень уничтожает цветы
+407	Skill_YinjiaSpear_FeiHouLanYue	Летающая обезьяна ловит луну
+408	Skill_YinjiaSpear_JiaoLongChuhai	Лунг из моря
+409	Skill_YinjiaSpear_LiGuanChangHong	Неудержимый укол
+410	Skill_YinjiaSpear_PoleKick	Удар шестом
+411	Skill_YinjiaSpear_TiQi	Поднять Ци
+412	Skill_YinjiaSpear_YinQiangBaWang	Военачальник с серебряным копьем
+413	Skill_Weapon_Polearm_Upstroke	Сокрушение
+414	Skill_Commander_War roar	Боевой рев
+417	Spell_MonsterAbility_BansheeChokingDenseFog	Удушающий густой туман
+418	Skill_MonsterAbility_BansheePaleEmbrace	Бледные объятия банши
+421	Spell_MonsterAbility_BansheeShriek	Крик банши
+419	Spell_MonsterAbility_BansheeDeathProphecy	Пророчество о смерти Банши
+420	Spell_MonsterAbility_BansheeEnchantingCommand	Зачаровывающая команда
+415	Spell_MonsterAbility_RipperUndeadArmy	Армия нежити
+416	Spell_MonsterAbility_RipperSoulHarvest	Сбор душ
+422	Spell_MonsterAbility_PetrifyRay	Окаменевший луч
+423	Spell_MonsterAbility_TailAttack	Атака хвостом
+424	Spell_Electric_TerritoryOfLightning	Территория молний
+425	Spell_Dark_DarkFury	Темная ярость
+426	Spell_Dark_DarkImprison	Темное заключение
+427	Spell_MonsterAbility_CorpsePoisonCloud	Ядовитое облако
+428	Spell_MonsterAbility_MummyPriestDeathCurse	Смертельное проклятие
+429	Spell_MonsterAbility_TheKingOfRotBlight	Порча
+430	Spell_MonsterAbility_TheKingOfRotDecayingSpore	Разлагающая спора
+431	Spell_MonsterAbility_TheKingOfRotSummonHounds	Призвать гончих
+432	Skill_Common_Begging	Попрошайничество
+433	Skill_Common_PlayLute	Игра на лютне
+434	Spell_MonsterAbility_GiantLavaGolem3HitCombo	Дико махать руками
+435	Spell_MonsterAbility_GiantLavaGolemEruptionOfLava	Извержение лавы
+436	Spell_MonsterAbility_SmashGround	Разбить землю
+437	Spell_MonsterAbility_GiantLavaMonsterElongationAttack	Атака на удлинение
+438	Spell_MonsterAbility_SmashGround	Разбить землю
+439	Spell_MonsterAbility_SpinAttack	Атака вращением
+440	Spell_MonsterAbility_LavaDragonLavaRift	Лавовый разлом
+441	Spell_MonsterAbility_SpinAttack	Атака вращением
+442	Spell_MonsterAbility_LavaDragonSpitLavaFireball	Плюйтесь огненными шарами лавы
+443	Spell_MonsterAbility_LavaDragonSprayLava	Распылить лаву
+444	Spell_MonsterAbility_SpinAttack	Атака вращением
+445	Skill_LingshePalm_PathOfSnake	Путь змеи
+446	Skill_LingshePalm_SneakStrike	Удар исподтишка
+447	Skill_LingshePalm_ThreeHeadsBite	Укус трех голов
+448	Skill_LingshePalm_ExuviateReborn	Перерождение
+449	Skill_LingshePalm_NineStepStrike	Девятишаговые удары
+450	Skill_LingshePalm_SnakeFangs	Змеиные клыки
+451	Skill_LingshePalm_VenomousFlicker	Ядовитое мерцание
+452	Skill_LingshePalm_BoneCorrosionPalm	Костяная ладонь
+453	Skill_EquipmentSkill_LotusCelestialDance	Небесный танец лотоса
+454	Spell_MonsterAbility_DrususSummonGiantMetalGolem	Призвать гигантского металлического голема
+455	Spell_MonsterAbility_SmashGround	Разбить землю
+458	Skill_MonsterAbility_GriffonDash	Пикирующий
+456	Skill_MonsterAbility_GriffonDash	Пикирующий
+462	Spell_MonsterAbility_GriffonFeatherMissiles	Перьевые ракеты
+457	Skill_MonsterAbility_GriffonFly	Летать
+459	Skill_MonsterAbility_GriffonDash	Пикирующий
+460	Spell_MonsterAbility_GriffonFeatherMissiles	Перьевые ракеты
+461	Skill_MonsterAbility_GriffonDash	Пикирующий
+463	Spell_MonsterAbility_GriffonFeatherMissiles	Перьевые ракеты
+464	Skill_MonsterAbility_GriffonDash	Пикирующий
+465	Spell_MonsterAbility_GriffonFeatherMissiles	Перьевые ракеты
+466	Spell_Spatial_SpatialDistortion	Искажение пространства
+467	Spell_Spatial_SpatialShockwave	Пространственная ударная волна
+468	Spell_Spatial_SpatialRepulsion 	Пространственное отталкивание
+469	Spell_Spatial_Teleportation	Телепортация
+470	Spell_MonsterAbility_SirenSeductiveShriek	Перьевые ракеты
+471	Spell_MonsterAbility_Shriek	Крик
+472	UseItem_DrinkPotion_PhysicalHealing	Выпить зелье исцеления
+473	Spell_MonsterAbility_Shriek	Крик
+474	Spell_MonsterAbility_VampireJumpBite	Прыжковый укус
+475	Spell_MonsterAbility_BrutalBite	Жестокий укус
+476	Spell_MonsterAbility_SmashGround	Разбить землю
+477	Spell_MonsterAbility_SpinAttack	Атака вращением
+479	Skill_Tamer_TameAnimal	Приручение Зверя
+480	Spell_Tamer_TrapNet	Сеть-Ловушка
+481	UseItem_DrinkPotion_DisguisePotion	Выпить зелье маскировки
+483	Skill_Tamer_Evade	Команда: Уклонение
+484	Skill_Tamer_MoveOut	Команда: Вперёд
+485	Skill_Tamer_Protect	Команда: Защита
+478	Skill_Tamer_BearTrap	Ловушка на медведя
+482	Spell_Tamer_AnimalCompanion	Призвать животное-спутника
+486	Spell_Fire_MantraOfTheNineLuminaries	Мантра Девяти Светил
+487	Spell_Fire_MantraOfWildfire	Мантра Всепоглощающего Пламени
+488	Spell_Fire_MantraOfTheDevouringSun	Мантра Пожирающего Солнца
+489	Spell_Fire_MantraOfMeteor	Мантра Метеора
+490	Spell_Fire_SigilOfMysticFire	Сигил Мистического Огня
+491	Spell_Fire_MantraOfFireWard	Мантра Огненного Оберега
+492	Spell_Equipment_GoldenTouch	Золотое прикосновение
+493	Spell_MonsterAbility_ZaydCryOfHorror	Крик Страха
+494	Skill_Gladiator_Dash attack	Атака с рывком
+495	Skill_Weapon_Shield_Smash ground	Удар по земле
+496	Skill_Common_Jump	Прыжок
+497	Spell_MonsterAbility_DragonFireBall	Огненный шар
+498	Spell_MonsterAbility_TigerScratch	Царапать
