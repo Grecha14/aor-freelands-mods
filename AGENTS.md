@@ -1,133 +1,82 @@
-# Памятка для ИИ-помощника (и для человека)
+# Памятка для ИИ-помощника: установка и проверка модов
 
-Моды на BepInEx 5 для Age of Reforging: The Freelands. Этот файл читают Claude Code
-(через `CLAUDE.md`) и другие помощники. Сначала прочтите его целиком, потом
-[docs/MODULES.md](docs/MODULES.md) — там по строке на каждый модуль.
+Этот репозиторий — готовые к установке моды для Age of Reforging: The Freelands (Steam):
+DemonLook 0.22.0, ItemForge 2.0.0, EncounterScale 1.2.0 и русский перевод. Исходников и
+сборки здесь нет: нужно только поставить и проверить. Отвечайте человеку по-русски.
 
-## Что где лежит
+## Что лежит в репозитории
 
-| Путь | Что это |
-|---|---|
-| `DemonLook/` | плагин «Demon Race», GUID `aor.demonlook`: раса демона и «живой мир» |
-| `ItemForge/` | плагин «Item Forge», GUID `aor.itemforge`: вещи, бой, травмы, кровь, перевод |
-| `EncounterScale/` | плагин «Encounter Scale», GUID `aor.encounterscale`: сила встреч по уровню |
-| `release/BepInEx/plugins/` | готовые DLL и перевод (`ItemForge/LocalizationPatch`) — так, как они лежат в игре |
-| `model/` | расчёты баланса на Python и отчёты `БАЛАНС*.md` |
-| `docs/` | карта модулей, заметки о статах и опыте ремёсел |
-| `build.ps1` | сборка всех трёх, по желанию — установка в игру |
-| `tools/decompile.ps1` | разбор кода игры в `GameSrc/` для поиска (в git не идёт) |
-
-## Сборка
-
-- Нужны: игра, в её папке BepInEx 5.4.23 x64, .NET SDK 8+ (проверено на 10.0.401).
-- `dotnet build DemonLook -c Release -p:GameDir="<папка игры>"` — и так же для
-  `ItemForge`, `EncounterScale`. Или `.\build.ps1 [-Install] [-GameDir ...]`.
-- Результат: `<Мод>\bin\Release\<Мод>.dll`. Цель — `net472`.
-- Проекты ссылаются на DLL игры через `$(GameDir)`: `Assembly-CSharp.dll` и прочие из
-  `Age of Reforging The Freelands_Data\Managed`, `BepInEx.dll` и `0Harmony.dll` из
-  `BepInEx\core`. Своих копий DLL игры в репозитории нет и быть не должно.
-- Вывод сборки может быть на языке системы: ошибки ищите по `error`, итог — «Ошибок: 0».
-
-## Установка и проверка
-
-- DLL кладётся в `BepInEx\plugins\<Мод>\<Мод>.dll` — в свою папку. ItemForge ищет перевод
-  рядом с собой: из корня `plugins` перевод молча не встанет.
-- Менять DLL только при **закрытой** игре. Проверка: `tasklist | findstr /i reforging`.
-- Журналы:
-  - `BepInEx\LogOutput.log` — сообщения модов. При старте каждый мод пишет, сколько правок
-    встало: DemonLook — «Правок поставлено: N», ItemForge — «Патчей поставлено: N». Если
-    там «не встало» — строкой выше сказано, какая правка и почему.
-  - `%USERPROFILE%\AppData\LocalLow\PersonaeGames\Age of Reforging The Freelands\Player.log`
-    — журнал Unity: исключения, шейдеры, вылеты.
-- Настройки: `BepInEx\config\aor.demonlook.cfg`, `aor.itemforge.cfg`,
-  `aor.encounterscale.cfg`. Значения по умолчанию — в коде, в `config.Bind(...)`.
-- Данные модов по сохранениям: `BepInEx\config\aor.*.<имя сохранения>.txt`.
-- Выгрузки для расчётов: DemonLook пишет `aor.world.txt` (города, расстояния, рецепты,
-  вещи, лавки, урожай, состояние хозяйства; на карте мира — сама карта). ItemForge по
-  Insert выписывает вещи.
-
-## Код игры для справки
-
-Кода игры в репозитории нет — это чужой закрытый код. Разберите у себя:
-
-```powershell
-dotnet tool install -g ilspycmd
-.\tools\decompile.ps1 -GameDir "<папка игры>"
+```
+release/BepInEx/plugins/DemonLook/DemonLook.dll
+release/BepInEx/plugins/ItemForge/ItemForge.dll
+release/BepInEx/plugins/ItemForge/LocalizationPatch/   dialogue_ru.tsv, items_ru.tsv,
+                                                        spells_ru.tsv, translations.txt, ui_ru.tsv
+release/BepInEx/plugins/EncounterScale/EncounterScale.dll
 ```
 
-Получится `GameSrc\Assembly-CSharp.decompiled.cs` (~11 МБ) и
-`GameSrc\Assembly-CSharp-firstpass.decompiled.cs`. Ищите по ним поиском (`grep`/`rg`):
-`class ИмяКласса`, `void ИмяМетода(`. Диалоги (PixelCrushers Dialogue System) и `Text` из
-UnityEngine.UI лежат в других DLL из `Managed` — их в этих файлах нет.
+То же одним архивом — `aor-freelands-mods-v1.0.zip` в выпуске v1.0 (Releases).
 
-## Как устроены моды
+## Установка по шагам (Windows)
 
-- **Один модуль — один файл.** `internal static class Имя` со своими `Bind(ConfigFile)`,
-  `On()` и, если нужно, `Tick()`. Правки Harmony — в том же файле, классы
-  `Что_Модуль_Patch`. `Plugin.cs` вызывает все `Bind` в `Awake` и все `Tick` в `Update`.
-- **Правки ставятся поштучно** (`ApplyPatches` в `Plugin.cs` обоих больших модов):
-  сломанная пропускается и пишется в журнал. Не возвращайте `PatchAll()`: он обрывается на
-  первой ошибке, и всё, что шло за ней, молча остаётся без правок.
-- **Настройки** — в `Bind` модуля, у каждой описание на английском, что она делает.
-  `ApplyRecipe` сбрасывает настройки к новым умолчаниям, когда поднимается версия рецепта.
-- **Комментарии.** У каждого модуля документ-комментарий: первая строка по-английски — что
-  это, дальше по-русски — правило так, как его увидит игрок, с числами. В коде — факты об
-  игре и «почему так, а не иначе», особенно после найденной ошибки. Держите их правдой:
-  поменяли правило — поменяйте и текст.
-- **Журнал и тексты в игре — по-русски.** Сообщения — через `DemonLookPlugin.Log` /
-  `ItemForgePlugin.Log`.
-- **Свои данные по сохранению:** имя сохранения — приватное поле
-  `SaveLoadManager.currentArchive` (через `AccessTools.Field`). Запись — в постфиксе
-  `SaveLoadManager.WriteDataToSaveFile`, чтение — в постфиксе
-  `TroopManagement.ArenaMatchManager.LoadInstance`.
-- **Для любого героя.** Механики мира работают при игре за любого персонажа. У демона
-  сверху свои заклинания и механика — проверки `Racial.IsDemon(...)` / `Souls.Demon()`
-  только для них.
-- **Книга «Сказание»** (DemonLook, `Chronicle.cs`): каждая строка должна отвечать
-  настоящему правилу мода.
-- **Файлы** — UTF-8, в репозитории переносы LF (git сам делает CRLF на Windows).
+1. **Найти папку игры** — ту, где лежит `Age of Reforging The Freelands.exe`. Обычно
+   `C:\Program Files (x86)\Steam\steamapps\common\Age of Reforging The Freelands`; если нет —
+   в других библиотеках Steam (`<диск>:\SteamLibrary\steamapps\common\...`) или спросить
+   человека: Steam → игра → «Управление» → «Просмотреть локальные файлы».
+2. **Копия сохранений** — перед установкой скопировать папку
+   `%USERPROFILE%\AppData\LocalLow\PersonaeGames\Age of Reforging The Freelands\Save`
+   куда-нибудь рядом. Сохранения с модами без модов могут не загрузиться.
+3. **Игра должна быть закрыта.** Проверка: `tasklist | findstr /i reforging` — пусто.
+   Запускать и закрывать игру сами не надо: попросите человека.
+4. **BepInEx 5.4.23 x64.** Если в папке игры нет `BepInEx\core\BepInEx.dll`:
+   - скачать `BepInEx_win_x64_5.4.23.x.zip` (самую новую 5.4.23.x) со страницы
+     <https://github.com/BepInEx/BepInEx/releases>. Не BepInEx 6 и не x86;
+   - распаковать в папку игры: рядом с `.exe` должны появиться `BepInEx\`, `winhttp.dll`,
+     `doorstop_config.ini`;
+   - попросить человека запустить игру до главного меню и закрыть: BepInEx создаст
+     `BepInEx\plugins` и `BepInEx\config`.
+5. **Моды.** Скопировать содержимое `release\` в папку игры со слиянием папок (или
+   распаковать туда архив из выпуска). Каждый мод — в своей папке `BepInEx\plugins\<Мод>\`.
+   Нельзя класть DLL прямо в `BepInEx\plugins`: ItemForge ищет перевод рядом с собой.
+6. **Проверка файлов:** есть `BepInEx\plugins\DemonLook\DemonLook.dll`,
+   `BepInEx\plugins\ItemForge\ItemForge.dll`, `BepInEx\plugins\ItemForge\LocalizationPatch\`
+   (5 файлов), `BepInEx\plugins\EncounterScale\EncounterScale.dll`.
 
-## Факты об игре, на которых всё стоит
+## Проверка, что моды встали
 
-- Unity 2021.3.45, Mono, BepInEx 5.4.23.5, HarmonyX.
-- Люди — модели UMA: одна натянутая сетка `UMARenderer` с атласными материалами
-  (шейдеры `RFS/Character/*`), доспех вшит в неё же, ткань — отдельными сетками. Когда с тела
-  снимают вещи, UMA пересобирает его: сетки и материалы меняются.
-- Карта мира: `WorldTravelManager` есть только на сцене карты. `WorldPlacesManager` живёт
-  всегда (`worldTowns`, `worldPlaces`, `distanceMap`). Отряды `TravelGroup` существуют рядом
-  с игроком; дальняя жизнь мира в DemonLook считается сама (хозяйство, торговцы, отряды).
-- Время: `TimeManager.TotalDay` (большое абсолютное число дней), `TimeManager.Hour`,
-  события `OnHourPassed` / `OnDayPassed`. «Номер ночи» в DemonLook — `Crime.Night()`.
-- Вещи: `UIItemDatabase.Instance.items` и `.recipes`. У чертежа (`UIItemInfo`) своё
-  качество `Quality`, у экземпляра (`Inventory`) — своё `quality` и приписки `addAttrs`.
-- Карточки состояний: `UIBuffDatabase`. Своя карточка — копия игровой через
-  `Instantiate` с новым `id`, вписанная в `db.buffs`; уровень — в
-  `new BuffBase(info, creator, duration, level)`.
-- Игра выбрасывает из сборки варианты шейдеров, которых у неё нигде нет. Новая сетка с
-  иными настройками отрисовки (пробы света, слои) может попросить такой вариант — и выйти
-  розовой. Настройки копируйте с исходной.
+Попросите человека запустить игру и дойти до главного меню, затем прочтите
+`BepInEx\LogOutput.log` в папке игры. Должно быть:
 
-## Ловушки (все уже случались)
+- `Demon Race v0.22.0 loaded` и строка `Правок поставлено: N` (DemonLook);
+- `Item Forge v2.0.0 loaded` и `Патчей поставлено: N` (ItemForge);
+- `Encounter Scale v1.2.0 loaded`;
+- строка вида `Перевод прочитан из «...\ItemForge\LocalizationPatch»` — перевод найден.
 
-1. `[HarmonyPatch(typeof(X), "M")]` ищет метод, **объявленный** в `X`. Метод предка
-   патчится на предке: `GetSkillLearnCost` объявлен в `CharacterSaveData`, не в
-   `NPCSaveData`. Статический помощник — там, где объявлен: `SpellManager.IsSpellReady`,
-   а не `GameController`. Из-за одной такой ошибки мод однажды полдня работал без правок.
-2. У перегрузок указывайте типы параметров: `new[] { typeof(A), typeof(B) }`.
-3. Параметр `out` в префиксе объявляйте как `out` и присваивайте на всех путях.
-4. Unity перегружает `==`: объект, созданный через `new`, а не движком, отвечает «я null».
-   Где это важно, сравнивайте `(object)x == null`.
-5. `TargetMethods()` с `AccessTools.DeclaredMethod` пишет в журнал предупреждения на
-   ненайденные методы — это не ошибка, если вы их отфильтровали.
-6. Копия игрового ScriptableObject (вещь, карточка, заклинание) живёт только в памяти:
-   в сохранение попадает её id. Без мода такой id игра не найдёт — предупреждайте игрока.
-7. В Git Bash на Windows многострочные here-doc с кириллицей ломаются: правки большими
-   кусками делайте скриптом из файла.
+Если рядом с «поставлено» есть «не встало: K» — строкой выше написано, какая правка и
+почему. Мод при этом работает, без одной этой части.
 
-## Правила работы с игрой
+## Частые беды
 
-- ИИ не запускает и не закрывает игру сам: тестирует человек, он и говорит, когда можно.
-- Перед изменением — план и согласие человека. Про механику спрашивайте на примере с
-  числами: «удар на 20% здоровья — +20 крови», а не словами.
-- Одна правка — один коммит, сообщение по-английски: что теперь делает игра и почему.
-- Не коммитьте разобранный код игры (`GameSrc/` в `.gitignore`) и журналы.
+| Что видно | В чём дело | Что делать |
+|---|---|---|
+| В журнале нет ни одного мода, `LogOutput.log` нет | BepInEx не запустился | проверить `winhttp.dll` и `doorstop_config.ini` рядом с `.exe`; версия должна быть 5.4.23 x64 |
+| Моды загрузились, перевода нет | DLL ItemForge не в своей папке или нет `LocalizationPatch` | разложить по шагу 5 |
+| «Не удалось заменить файл» при копировании | игра запущена | закрыть игру и повторить |
+| После обновления игры моды падают или не грузятся | игра поменяла свой код | сообщить автору модов, версию игры взять из Steam |
+| Старое сохранение не грузится без модов | в нём вещи и жители из модов | вернуть копию сохранений из шага 2 |
+| Розовые предметы или куски в игре | не нашёлся материал для отрисовки | сообщить автору модов, приложив `LogOutput.log` |
+
+Ещё один журнал — Unity: `%USERPROFILE%\AppData\LocalLow\PersonaeGames\Age of Reforging The Freelands\Player.log`.
+В нём исключения и ошибки шейдеров. Его и `LogOutput.log` стоит прикладывать, когда пишете
+автору модов.
+
+## Настройки
+
+`BepInEx\config\aor.demonlook.cfg`, `aor.itemforge.cfg`, `aor.encounterscale.cfg` появляются
+при первом запуске. У каждой настройки есть описание; почти у каждого правила есть
+`Enabled = true`. Менять — при закрытой игре. Свои данные моды хранят там же, по имени
+сохранения: `aor.*.<имя сохранения>.txt` — их не трогать.
+
+## Удаление
+
+Удалить папки `DemonLook`, `ItemForge`, `EncounterScale` из `BepInEx\plugins`; при желании
+и `aor.*` из `BepInEx\config`. Для игры без модов — вернуть копию сохранений.
